@@ -1,4 +1,26 @@
-import 'category_model.dart';
+class Category {
+  final String image, name;
+  Category({required this.image, required this.name});
+}
+
+List<Category> categories = [
+  Category(
+    image: 'hot coffee.png',
+    name: 'Hot Coffee',
+  ),
+  Category(
+    image: 'drink.png',
+    name: 'Drinks',
+  ),
+  Category(
+    image: 'hot tea.png',
+    name: 'Hot Teas',
+  ),
+  Category(
+    image: 'bakery.png',
+    name: 'Bakery',
+  ),
+];
 
 class Product {
   final String image, name;
@@ -7,9 +29,9 @@ class Product {
 
   Product(
       {required this.category,
-        required this.image,
-        required this.name,
-        required this.price});
+      required this.image,
+      required this.name,
+      required this.price});
 }
 
 List<Product> products = [

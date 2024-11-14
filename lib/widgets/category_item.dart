@@ -1,10 +1,12 @@
-import 'package:coffee_app/Models/category_model.dart';
 import 'package:flutter/material.dart';
+import '../models/product_model.dart';
 
-class CategoryItems extends StatelessWidget {
+class CategoryItem extends StatelessWidget {
   final Category category;
-
-  const CategoryItems({super.key, required this.category});
+  const CategoryItem({
+    super.key,
+    required this.category,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,23 +14,19 @@ class CategoryItems extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Container(
-          width: 75,
           height: 75,
-          decoration:
-              const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+          width: 75,
           padding: const EdgeInsets.all(10),
+          decoration: const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
           child: Image.asset('images/${category.image}'),
         ),
-        const SizedBox(
-          height: 10,
-        ),
+        const SizedBox(height: 10),
         Text(
           category.name.toUpperCase(),
           style: const TextStyle(
-            fontWeight: FontWeight.w900,
-            color: Colors.white,
-            fontSize: 13,
-          ),
+              color: Colors.white,
+              fontSize: 13,
+              fontWeight: FontWeight.w900),
         )
       ],
     );

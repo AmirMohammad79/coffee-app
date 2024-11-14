@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../Utils/colors.dart';
 import '../models/product_model.dart';
 
-class DisplayImage extends StatelessWidget {
+class ProductImage extends StatelessWidget {
   final Product product;
-  const DisplayImage({
+  const ProductImage({
     super.key,
     required this.product,
   });
@@ -24,12 +24,12 @@ class DisplayImage extends StatelessWidget {
                 width: constrain.maxWidth,
                 height: constrain.maxWidth*0.9,
                 decoration:
-                const BoxDecoration(color: thirdColor, shape: BoxShape.circle),
+                    const BoxDecoration(color: thirdColor, shape: BoxShape.circle),
               ),
               ClipRRect(
                 borderRadius: BorderRadius.vertical(
                     bottom: Radius.circular(constrain.maxWidth * 0.45)),
-                  child: SizedBox(
+                child: SizedBox(
                   width: constrain.maxWidth * 0.9,
                   height: constrain.maxWidth * 2,
                   child: Stack(
