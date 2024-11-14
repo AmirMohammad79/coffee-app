@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CoffeeBean extends StatelessWidget {
-  final double? top, left, bottom, right, degree;
+  final double? top, left, bottom, right, degress;
 
   const CoffeeBean(
-      {super.key, this.top, this.left, this.bottom, this.right, this.degree});
+      {super.key, this.top, this.left, this.bottom, this.right, this.degress});
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +16,11 @@ class CoffeeBean extends StatelessWidget {
         right: right,
         bottom: bottom,
         child: Transform.rotate(
-          angle: degree! * pi / 190,
+          angle: degress! * pi / 190,
           child: SvgPicture.asset(
             'images/coffee-bean.svg',
             width: 150,
           ),
-        ));
+        ),);
   }
 }
