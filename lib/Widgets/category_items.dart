@@ -1,4 +1,4 @@
-import 'package:coffee_app/Models/product_model.dart';
+import 'package:coffee_app/Models/category_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItems extends StatelessWidget {
